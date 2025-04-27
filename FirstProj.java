@@ -4,31 +4,31 @@ import java.util.Collections;
 
 public class FirstProj {
 
-	public static int getmaxlenght(int[][] arr) {
-		int maxlen = 0, lenarr =0;
-		for(int[] i : arr) {
-			for(int j : i) {
-				lenarr = String.valueOf(j).length();
-				if(lenarr>maxlen) {
-					maxlen= lenarr;
-				}
-			}
+	public static void sumMethod(int a, int b) {
+		System.out.println("Value of a - "+a);
+		System.out.println("Value of b - "+b);
+		int c = 0;
+		try {
+			c = a/b;
+		}catch(Exception e) {
+			System.out.println("Value of b cannot be zero");
 		}
-		return maxlen;
-	}
-
-	public static void main(String[] args) {
-		//This comment added in github cloud
-		int[][] arr = {{78,23,2344},{-78,1234,1111},{34,3,23}};
-		int count =0;
-		count = getmaxlenght(arr);
-		for(int[] i : arr) {
-			for(int j : i) {
-				System.out.printf("%"+(count+1)+"d",j);
-			}
-			System.out.println();
-		}
-		//
+		
+		if(b==0)
+			throw new ArithmeticException("Value of b cannot be zero");
+		
+		
+		System.out.println("Sum of a and b - "+c);
+		System.out.println("Hello World");
 	}
 	
+
+
+	public static void main(String[] args) {
+		//
+		int a,b;
+		a =90; 
+		b=10;
+		sumMethod(a,b);
+	}
 }
